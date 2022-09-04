@@ -1,0 +1,33 @@
+/******************************************************************
+
+Stylesheet: 992px以上のモニタで適用
+
+******************************************************************/
+.font-sm {
+  font-size: 16px;
+}
+.font-md {
+  font-size: 19px;
+}
+.font-lr {
+  font-size: 23px;
+}
+.font-lg {
+  font-size: 36px;
+}
+.mb-lg {
+  margin-bottom: 150px !important;
+}
+.pb-lg {
+  padding-bottom: 150px !important;
+}
+
+.footer {
+  display: none;
+}
+.lg-box {
+  padding-bottom: 0rem;
+}
+.top_img_box{
+  height: 120px;
+}

@@ -1,0 +1,19 @@
+/******************************************************************
+
+Stylesheet: 768px以上のタブレットやモニタで適用
+
+******************************************************************/
+.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.write_space_normal{
+    white-space: normal;
+    width: 400px;
+}
+.top_img_box{
+  height: 92px;
+}
+.head_logo{
+  width: 10rem;
+}

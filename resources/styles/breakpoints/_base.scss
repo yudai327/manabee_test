@@ -1,0 +1,755 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body {
+  font-family: 'Oswald','Noto Sans JP', sans-serif;
+  font-size: 1.0rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+a{
+  color: black;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+.pre-wrap{
+  white-space: pre-wrap;
+  word-wrap:break-word;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+.h_fit{
+  height: fit-content;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+.center{
+  text-align: center;
+}
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+}
+.hr_dot {
+	border-width: 1px 0 0 0;
+	border-style: dotted;
+	border-color: black;
+}
+.w_100{
+  width: 100%;
+}
+.bg_dark{
+  background-color: #1e1e1c;
+}
+.flex {
+  display: flex;
+  flex-flow: wrap;
+}
+.pre_wrap{
+  white-space: pre-wrap;
+}
+.main_color{
+  background-color: yellow;
+}
+.outcolor{
+  background-color: yellow;
+  padding: 10px;
+}
+.out2color{
+  background-color: white;
+}
+.navbar{
+  background-color: white;
+  // box-shadow: 0px 0 10px 0px rgba(115,115,115,0.75);
+}
+.header_font{
+  font-size: .5rem;
+}
+.head_logo{
+  width: 5.1rem;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;               /* 幅指定 */
+  text-align: center;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0px -2px 30px -9px rgba(0,0,0,0.4);
+
+  &__container{
+    width: 100%;               /* 幅指定 */
+  }
+  &__item{
+    width: 18%;               /* 幅指定 */
+    display:  inline-block;     /* インラインブロック要素にする */
+    margin: 5px 0;         /* 要素同士の隙間調整 */
+    box-sizing: border-box;     /* 崩れ防止 */
+    vertical-align: top;
+    line-height: 10px;
+      & > a > span {
+        font-size: 5px;
+      }
+  }
+  &__icon{
+    width: 100%;
+    & > i {
+      font-size: 30px;
+    }
+  }
+}
+.clamp2{
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.clamp1{
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.sub_color{
+  color: #606060;
+}
+.item_box{
+  &__inner{
+    padding: 5px;
+    color: black;
+  }
+  &__name{
+      color: #606060;
+      &:hover{
+          text-decoration: none;
+      }
+  }
+}
+.h_circle{
+  display: inline-block;
+  text-align:center;
+}
+
+.top_img_box{
+  display: inline-block;
+  height: 100px;
+  // position: relative;
+}
+.video_time{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: black;
+  background-color: yellow;
+  font-size: .5rem;
+  padding: 0 .2rem;
+}
+.side_img_box{
+  display: inline-block;
+  height: 80px;
+}
+.top_img{
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.circle{
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: skyblue;
+  text-align:center;
+  line-height: 30px;
+}
+
+.btn_search {
+  color: black;
+  background-color: #ced4da;
+  border: 1.02px solid #ced4da;}
+.btn-reset{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+.btn_round{
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.a_link :hover {
+  text-decoration: none;
+}
+.contact_form{
+  max-width: 600px;
+  margin: auto;
+}
+.write_space_normal{
+    white-space: normal;
+    width: auto;
+}
+ol.list_parentheses{
+  padding:0 0 0 2em;
+  margin:0;
+}
+ 
+ol.list_parentheses li{
+  list-style-type:none;
+  list-style-position:inside;
+  counter-increment: cnt;
+}
+ol.list_parentheses li:before{
+  display: marker;
+  content: "(" counter(cnt) ") ";
+}
+
+/*５段階評価★★★★★*/
+.evaluation{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.evaluation input[type='radio']{
+  display: none;
+}
+.evaluation label{
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.evaluation label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: gray;
+}
+.evaluation label:hover,
+.evaluation label:hover ~ label,
+.evaluation input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+.star-rating {
+  position: relative;
+  font-size: 20px;
+  word-wrap: normal;
+  width: fit-content;
+}
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+.star-rating-back {
+  color: #ccc;
+}
+.star-rating-item {
+  position: relative;
+  font-size: 13px;
+  word-wrap: normal;
+  width: fit-content;
+}
+
+
+.item_rv_t_area{
+  border: none;
+  white-space: pre-wrap;
+  font-size: .8rem;
+  background: none;
+}
+// シェアボタン
+.sosyal {
+  margin: 20px auto;
+}
+.facebook {
+  background-color: #2e4a88;
+  box-shadow: 0 4px 0 #1B3D82;
+  text-shadow: 0 -1px -1px #1B3D82;
+  display: inline;
+  position: relative;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.facebook:hover {
+  background-color: #354F84;
+  text-decoration: none;
+  color: white;
+}
+.facebook:active {
+  top: 2px;
+	box-shadow: 0 2px 0 #1B3D82;
+}
+.twitter {
+  background-color: #008DDE;
+  box-shadow: 0 4px 0 #0078BD;
+  display: inline;
+  position: relative;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.twitter:active {
+  top: 2px;
+	box-shadow: 0 2px 0 #0078BD;
+}
+.twitter:hover {
+  background-color: #1397D8;
+  text-decoration: none;
+  color: white;
+}
+.google {
+  background-color: #CC3622;
+  box-shadow: 0 4px 0 #BA2714;
+  display: inline;
+  position: relative;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.google:active {
+  top: 2px;
+	box-shadow: 0 2px 0 #BA2714;
+}
+.google:hover {
+  background-color: #D04829;
+  text-decoration: none;
+  color: white;
+}
+.share-text{
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+  margin-top: 30px;
+}
+.share-text:before, .share-text:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: #000;
+}
+.share-text:before {
+    left: 0;
+}
+
+
+// sidebarのシェアボタン
+.btn-twitter {
+  display: inline-block;
+  padding: .6em 1em .6em 2.5em;
+  margin: 0 0 .4em;
+  background-color: #55acee;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+.btn-twitter::after {
+  position: absolute;
+  content: '\f099';
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  top: 50%;
+  left: .5em;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+}
+.btn-facebook {
+  display: inline-block;
+  padding: .6em .8em .6em 2.5em;
+  margin: 0 0 .4em;
+  background-color: #315096;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.btn-facebook::after {
+  position: absolute;
+  content: '\f09a';
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  top: 50%;
+  left: .5em;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+}
+
+//動画投稿ページ
+.regist_contents{
+  margin: 1rem;
+}
+.regist_title{
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #f8fafc;
+  height: calc(1.6em + 0.75rem + 2px);
+}
+#textarea{
+  max-height: 50rem;
+  min-height: 10rem;
+}
+.regist_img_box{
+  width: 50%;
+  max-height: 200px;
+}
+.regist_img{
+  max-height: 200px;
+}
+.regist_price{
+  width: 75%;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background-color: #f8fafc;
+  font-size: 2rem;
+}
+.regist_btn{
+  margin: 2rem;
+}
+//footericonにコンテンツが隠れないように
+.lg-box {
+  padding-bottom: 4rem;
+}
+
+#accordion .card-header a[data-toggle="collapse"].collapsed::after {
+    display: none;
+    font-family: "Font Awesome 5 Solid";
+    content: "\f078";/* chevron-down */
+}
+#accordion .card-header a[data-toggle="collapse"]::after {
+    display: none;
+    font-family: "Font Awesome 5 Solid";
+    content: "\f077";/* chevron-up */
+}
+#accordion .card-header a .svg-inline--fa[data-fa-pseudo-element] {
+    float: right;
+}
+
+// on,offスイッチ
+.switchArea {
+  line-height    : 60px;                /* 1行の高さ          */
+  letter-spacing : 0;                   /* 文字間             */
+  text-align     : center;              /* 文字位置は中央     */
+  font-size      : 27px;                /* 文字サイズ         */
+
+  position       : relative;            /* 親要素が基点       */
+  margin         : auto;                /* 中央寄せ           */
+  width          : 150px;               /* ボタンの横幅       */
+  background     : #fff;                /* デフォルト背景色   */
+}
+
+.or-seperator {
+  margin: 20px 0 10px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.or-seperator i {
+  padding: 0 10px;
+  background: #f7f7f7;
+  position: relative;
+  top: -11px;
+  z-index: 1;
+}
+.social-btn .btn {
+  margin: 10px auto;
+  font-size: 15px;
+  text-align: left;
+  line-height: 24px;
+  width: 200px;
+}
+.social-btn .btn i {
+  float: left;
+  margin: 4px 15px  0 5px;
+      min-width: 15px;
+}
+.input-group-addon .fa{
+  font-size: 18px;
+}
+
+ /* === チェックボックス ==================================== */
+.switchArea input[type="checkbox"] {
+  display        : none;            /* チェックボックス非表示 */
+}
+
+ /* === チェックボックスのラベル（標準） ==================== */
+.switchArea label {
+  display        : block;               /* ボックス要素に変更 */
+  box-sizing     : border-box;          /* 枠線を含んだサイズ */
+  height         : 60px;                /* ボタンの高さ       */
+  border         : 2px solid #999999;   /* 未選択タブのの枠線 */
+  border-radius  : 30px;                /* 角丸               */
+}
+
+ /* === チェックボックスのラベル（ONのとき） ================ */
+.switchArea input[type="checkbox"]:checked +label {
+  border-color   : #78bd78;             /* 選択タブの枠線     */
+}
+
+ /* === 表示する文字（標準） ================================ */
+.switchArea label span:after{
+  content        : "非公開";               /* 表示する文字       */
+  padding        : 0 0 0 36px;          /* 表示する位置       */
+  color          : #999999;             /* 文字色             */
+}
+
+ /* === 表示する文字（ONのとき） ============================ */
+.switchArea  input[type="checkbox"]:checked + label span:after{
+  content        : "公開";                /* 表示する文字       */
+  padding        : 0 36px 0 0;          /* 表示する位置       */
+  color          : #78bd78;             /* 文字色             */
+}
+
+ /* === 丸部分のSTYLE（標準） =============================== */
+.switchArea #swImg {
+  position       : absolute;            /* 親要素からの相対位置*/
+  width          : 52px;                /* 丸の横幅           */
+  height         : 52px;                /* 丸の高さ           */
+  background     : #999999;             /* カーソルタブの背景 */
+  top            : 4px;                 /* 親要素からの位置   */
+  left           : 4px;                 /* 親要素からの位置   */
+  border-radius  : 26px;                /* 角丸               */
+  transition     : .2s;                 /* 滑らか変化         */
+}
+
+ /* === 丸部分のSTYLE（ONのとき） =========================== */
+.switchArea input[type="checkbox"]:checked ~ #swImg {
+  transform      : translateX(90px);    /* 丸も右へ移動       */
+  background     : #78bd78;             /* カーソルタブの背景 */
+}
+
+.radio {
+	display: none;
+}
+ 
+.radio + .radio_image {
+	border: 3px #ffffff solid;
+	background-color: #ffffff;
+}
+.radio:checked + .radio_image {
+	border: 10px #ff0000 solid;
+	background-color: #ffeeee;
+}
+.edit_img{
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+.all_score{
+  width: fit-content;
+}
+.head_seach{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+.settle_form{
+  margin-top: 5rem;
+  width: 80%;
+}
+.custom-file {
+  overflow: hidden;
+}
+.custom-file-label {
+  white-space: nowrap;
+}
+.min_w_200{
+  min-width: 200px;
+}
+.detail_img{
+   max-height: 200px;
+}
+.pre_check_none{
+  display:none;
+}
+.pre_video_check:checked ~ .pre_check_none{
+  display:block;
+}
+.pre_check_block{
+  display:block;
+}
+.pre_video_check:checked ~ .pre_check_block{
+  display:none;
+}
+.none_pre{
+  display:block;
+}
+.none_pre_check:checked ~ .none_pre{
+  display:none;
+}
+.header_push{
+  right: -50px;
+  min-width: 17rem;
+}
+.list-group-item.active {
+    color: black;
+    background-color: yellow;
+    border: 1px solid black;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: black;
+    background-color: yellow;
+    border: 1px solid #dee2e6;
+}
+.channel_art{
+  background-color: yellow;
+  height: 150px;
+  width: auto;
+  margin: auto;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: yellow;
+  color: black;
+}
+.btn_color{
+  background-color: #ec5252;
+  border: none;
+  color: white;
+}
+.btn_color:hover{
+  background-color: #e61b1b;
+  color: white;
+}
+@-webkit-keyframes pulse {
+ from {
+   opacity: 1.0;/*透明度100%*/
+ }
+ to {
+   opacity: 0.6;/*透明度80%*/
+ }
+}
+.blinking{
+-webkit-animation-name: pulse;/* 実行する名前 */
+-webkit-animation-duration: 0.3s;/* 0.3秒かけて実行 */
+-webkit-animation-iteration-count:infinite;/* 何回実行するか。infiniteで無限 */
+-webkit-animation-timing-function:ease-in-out;/* イーズインアウト */
+-webkit-animation-direction: alternate;/* alternateにするとアニメーションが反復 */
+-webkit-animation-delay: 0s; /* 実行までの待ち時間 */
+}
+
+/*** custom checkboxes ***/
+.item_free_check[type=checkbox] { display:none; } /* to hide the checkbox itself */
+.item_free_check[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+.item_free_check[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+.item_free_check[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+.item_free_check[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+.item_free_check[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+
+.modal-backdrop{
+  z-index: 1019;
+}
+.icon_deco{
+  display        : inline-block;
+  color          : #ffff1a;            /* 文字の色 */
+  text-shadow    : 
+    2px  2px 1px #000000,
+    -2px  2px 1px #000000,
+    2px -2px 1px #000000,
+    -2px -2px 1px #000000,
+    2px  0px 1px #000000,
+    0px  2px 1px #000000,
+    -2px  0px 1px #000000,
+    0px -2px 1px #000000;         /* 文字の影 */
+}
+.sales_img{
+  width: 100%;
+}
+.posted_img_box{
+  width: 100%;
+  max-height: 75px;
+  text-align: center;
+}
+.posted_img{
+  height: 75px;
+}
+.post_img{
+  height: 5rem;
+}
+.loved i {
+  color: red !important;
+}
